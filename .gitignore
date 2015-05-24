@@ -5,3 +5,4 @@ local
 .idea
 .environment.yaml
 pip-selfcheck.json
+*.pyc
