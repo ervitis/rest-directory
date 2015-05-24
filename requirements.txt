@@ -1,0 +1,8 @@
+Django>=1.8
+django-filter
+django-guardian
+djangorestframework
+PyYAML
+markdown
+PyMySQL
+mysqlclient
