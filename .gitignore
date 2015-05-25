@@ -3,6 +3,6 @@ include
 lib
 local
 .idea
-.environment.yaml
+rest_directory_project/.environment.yaml
 pip-selfcheck.json
 *.pyc

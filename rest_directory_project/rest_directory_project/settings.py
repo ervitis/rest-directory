@@ -24,7 +24,7 @@ try:
     with open(yaml_path, 'r') as f_yaml:
         data = yaml.load(f_yaml)
 except Exception as e:
-    raise Exception('%s/.environment.yaml file not found' % BASE_DIR)
+    raise Exception('%s file not found' % yaml_path)
 
 if data is None or len(data) == 0:
     raise Exception('Error in environment.yaml file')
@@ -145,3 +145,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    )
+}
