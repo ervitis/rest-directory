@@ -6,3 +6,4 @@ PyYAML
 markdown
 PyMySQL
 mysqlclient
+django-cors-headers
