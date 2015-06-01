@@ -18,7 +18,7 @@ class GetUserViewSet(APIView):
             try:
                 index = next(i for (i, d) in enumerate(USERS) if d['name'] == name)
                 return Response(status=status.HTTP_200_OK, data=USERS[index])
-            except StopIteration as e:
+            except StopIteration:
                 return Response(status=status.HTTP_404_NOT_FOUND)
         else:
             return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
